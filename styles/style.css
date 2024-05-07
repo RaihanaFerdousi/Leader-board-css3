@@ -82,3 +82,80 @@ hr{
 .blog-author span{
     color: #9F9F9F;
 }
+
+/* Latest courses styles */
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: lightblue; */
+    transition: box-shadow 0.3s ease; /* Optional: Add transition effect */
+    gap: 20px;
+}
+.course{
+    box-shadow: 0 4px 8px #0000001a, 0 0 0 1px #0000001a; /* Two layers of box shadow for a more refined look */
+    border-radius: 8px;
+    padding: 20px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104;
+}
+
+.course-author{
+    color: #ED6B4F;
+}
+.course-details{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.course-ratings img{
+    width: 12px;
+    height: 11px;
+}
+
+.course-duration{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #FFE4E8;
+    padding: 0 8px;
+    height: 35px;
+    border-radius: 24px;
+}
+.course-duration img{
+    width: 25px;
+    height: 25px;
+}
+
+/* media Queries */
+
+/* Mobile Devices */
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .section-title{
+        text-align: center;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+     }
+}
+
+/* tablet devives */
+@media screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
